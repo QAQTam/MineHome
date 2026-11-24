@@ -1,0 +1,45 @@
+MineHome
+Copyright 2026 The MineHome Contributors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--- Additional notices ---
+
+1. "Xiaomi", "Mi", "Mijia" (小米 / 米家) and related product names and logos
+   are trademarks of Xiaomi Inc. (and their respective owners). This project
+   is NOT affiliated with, endorsed by, or sponsored by Xiaomi.
+
+2. This repository does NOT contain, and is NOT derived from source code of:
+   - the official Mi Home / Mijia Android application (no decompiled code,
+     no APK assets, no firmware images);
+   - Xiaomi's proprietary SDKs or their binaries (e.g. miloco / libmiot_*).
+   Protocol interoperability knowledge in docs/ was obtained by observing
+   network behavior of the cloud APIs with the maintainer's own account and
+   by reading publicly available community work, listed below.
+
+3. Public community work referenced by the analysis documents (reference
+   only; no code was copied from any of them into this repository, except
+   where a file explicitly states otherwise):
+   - miot-spec.org          — public device specification registry
+   - python-miio            — miIO / MiOT protocol documentation
+   - PiotrMachowski/micloud — cloud API signing cross-check
+   - XiaoMi/ha_xiaomi_home  — architecture reference (Apache-2.0)
+   - custom-components/ble_monitor — MiBeacon object semantics cross-check
+     (MIT). mijia-core/src/ble.rs aligns decode semantics with its public
+     xiaomi.py parser; original MIT terms apply to that reference only.
+
+4. Device card templates and device specifications are fetched at runtime
+   from public endpoints (api.io.mi.com getappconfig / miot-spec.org). They
+   are NOT redistributed inside this repository; the committed test fixtures
+   (mijia-core/fixtures/) are synthetic or publicly published specification
+   data, and contain no account information.

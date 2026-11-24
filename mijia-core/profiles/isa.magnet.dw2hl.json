@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "model": "isa.magnet.dw2hl",
+  "category": "magnet-sensor",
+  "scrub": "synthetic",
+  "values": [],
+  "expect": {
+    "items": [
+      "sensor_status:2:2"
+    ],
+    "quick_switch": false,
+    "quick_switch_reason": "blocked_no_toggle",
+    "control_services_excluded": true
+  },
+  "release": {
+    "quick_switch": false,
+    "confirmed_by": "",
+    "policy": "只读先行：打开需人工确认并在 confirmed_by 记录确认人/日期"
+  }
+}

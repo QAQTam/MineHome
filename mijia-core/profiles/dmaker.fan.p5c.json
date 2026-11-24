@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "model": "dmaker.fan.p5c",
+  "category": "fan",
+  "scrub": "synthetic",
+  "values": [],
+  "expect": {
+    "items": [
+      "toggle:2:1",
+      "toggle:2:4",
+      "gear:2:2",
+      "gear:2:4",
+      "gear:2:2",
+      "status_text:2:3",
+      "status_text:2:2"
+    ],
+    "quick_switch": true,
+    "quick_switch_reason": "allowed_spec_on",
+    "control_services_excluded": true
+  },
+  "release": {
+    "quick_switch": false,
+    "confirmed_by": "",
+    "policy": "只读先行：打开需人工确认并在 confirmed_by 记录确认人/日期"
+  }
+}

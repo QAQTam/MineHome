@@ -1,0 +1,39 @@
+{
+  "allowlist": {
+    "测试风扇": {
+      "did": "000000000",
+      "model": "dmaker.fan.p5c",
+      "actions": {
+        "set_speed": {
+          "description": "无级风速 1-100",
+          "writes": [
+            { "siid": 8, "piid": 1, "from_request": true, "min": 1, "max": 100, "integer": true }
+          ],
+          "verify": [{ "siid": 8, "piid": 1 }]
+        },
+        "off": {
+          "description": "关闭",
+          "writes": [{ "siid": 2, "piid": 1, "value": false }],
+          "verify": [{ "siid": 2, "piid": 1 }]
+        }
+      }
+    },
+    "测试深夜灯": {
+      "did": "000000001",
+      "model": "xiaomi.switch.w1",
+      "quiet_hours": { "utc_offset_secs": 28800, "start_minute": 0, "end_minute": 1440 },
+      "actions": {
+        "on": {
+          "description": "全天静默（专测 quiet_hours）",
+          "writes": [{ "siid": 2, "piid": 1, "value": true }],
+          "verify": [{ "siid": 2, "piid": 1 }]
+        }
+      }
+    }
+  },
+  "temp_sensor": { "did": "000000002", "siid_temp": 2, "piid_temp": 1001 },
+  "monitors": { "测试门·接触态": { "did": "000000003", "siid": 2, "piid": 2 } },
+  "auto_actions": [],
+  "grant": { "auto_enabled": false },
+  "cooldown_secs": 60
+}

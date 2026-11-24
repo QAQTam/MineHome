@@ -1,0 +1,53 @@
+{
+  // fork 后请先复制本文件为 `app/build-profile.json5`（那个文件名被 .gitignore 忽略，
+  // 因为它含签名材料与本机绝对路径，不能进仓库）：
+  //     cp app/build-profile.json5.example app/build-profile.json5
+  // 然后用 DevEco Studio 打开 app/ 工程：
+  //     File ▸ Project Structure ▸ Project ▸ Signing Configs ▸ ✔ Automatically generate signature
+  // 自动签名会把下面 signingConfigs 的 material 四项写回 `app/build-profile.json5`，
+  // 同时在你本机 `~/.ohos/config/` 下生成 .p12/.cer/.p7b。这一步必须在**自己的机器**上做，
+  // 因为那四个密码是用本机主密钥加密的，抄别人的既解不开也没意义。
+  app: {
+    // 自动签名前留空数组。手改的话把四行 material 补进 material{}，值来自你本机
+    // ~/.ohos/config/ 下生成的文件与 DevEco 写入的加密串——**不要**把它提交回来。
+    signingConfigs: [],
+    products: [
+      {
+        name: 'default',
+        // 这个名字要和 signingConfigs[0].name 对上；自动签名默认就写 'default'
+        signingConfig: 'default',
+        targetSdkVersion: '26.0.0',
+        compatibleSdkVersion: '26.0.0',
+        runtimeOS: 'HarmonyOS',
+        buildOption: {
+          strictMode: {
+            caseSensitiveCheck: true,
+            useNormalizedOHMUrl: true,
+          },
+        },
+      },
+    ],
+    buildModeSet: [
+      {
+        name: 'debug',
+      },
+      {
+        name: 'release',
+      },
+    ],
+  },
+  modules: [
+    {
+      name: 'entry',
+      srcPath: './entry',
+      targets: [
+        {
+          name: 'default',
+          applyToProducts: [
+            'default',
+          ],
+        },
+      ],
+    },
+  ],
+}

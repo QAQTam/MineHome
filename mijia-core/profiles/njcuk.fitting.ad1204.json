@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "model": "njcuk.fitting.ad1204",
+  "category": "unknown-device-type",
+  "scrub": "synthetic",
+  "values": [],
+  "expect": {
+    "items": [
+      "status_text:0:0"
+    ],
+    "quick_switch": false,
+    "quick_switch_reason": "blocked_no_toggle",
+    "control_services_excluded": true
+  },
+  "release": {
+    "quick_switch": false,
+    "confirmed_by": "",
+    "policy": "只读先行：打开需人工确认并在 confirmed_by 记录确认人/日期"
+  }
+}

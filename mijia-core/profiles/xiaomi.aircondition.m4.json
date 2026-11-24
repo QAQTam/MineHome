@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "model": "xiaomi.aircondition.m4",
+  "category": "air-conditioner",
+  "scrub": "synthetic",
+  "values": [],
+  "expect": {
+    "items": [
+      "toggle:2:1",
+      "enum_choice:2:2",
+      "stepper:2:4",
+      "observe_number:4:7",
+      "observe_number:4:9",
+      "gear:3:2",
+      "status_text:2:2"
+    ],
+    "quick_switch": true,
+    "quick_switch_reason": "allowed_spec_on",
+    "control_services_excluded": true
+  },
+  "release": {
+    "quick_switch": false,
+    "confirmed_by": "",
+    "policy": "只读先行：打开需人工确认并在 confirmed_by 记录确认人/日期"
+  }
+}

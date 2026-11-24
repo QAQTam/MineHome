@@ -1,0 +1,50 @@
+{
+  "allowlist": {
+    "落地扇": {
+      "did": "<device-did>",
+      "model": "dmaker.fan.p5c",
+      "actions": {
+        "on": {
+          "description": "打开落地扇",
+          "writes": [{ "siid": 2, "piid": 1, "value": true }],
+          "verify": [{ "siid": 2, "piid": 1 }]
+        },
+        "set_speed": {
+          "description": "无级风速 1-100（注意：不是 1-4 挡位 fan-level）",
+          "writes": [
+            { "siid": 8, "piid": 1, "from_request": true, "min": 1, "max": 100, "integer": true }
+          ],
+          "verify": [{ "siid": 8, "piid": 1 }]
+        }
+      }
+    },
+    "示例灯": {
+      "did": "<device-did>",
+      "model": "xiaomi.switch.w1",
+      "quiet_hours": { "utc_offset_secs": 28800, "start_minute": 1380, "end_minute": 480 },
+      "actions": {
+        "off": {
+          "description": "关示例灯（23:00-08:00 静默时段内一律拒绝）",
+          "writes": [{ "siid": 2, "piid": 1, "value": false }],
+          "verify": [{ "siid": 2, "piid": 1 }]
+        }
+      }
+    }
+  },
+  "temp_sensor": {
+    "did": "<blt-did>",
+    "siid_temp": 2,
+    "piid_temp": 1001,
+    "siid_humidity": 2,
+    "piid_humidity": 1002,
+    "siid_battery": 3,
+    "piid_battery": 1003
+  },
+  "monitors": {
+    "示例门磁·接触态": { "did": "<blt-did>", "siid": 2, "piid": 2 },
+    "示例灯·通断": { "did": "<device-did>", "siid": 2, "piid": 1 }
+  },
+  "auto_actions": [],
+  "grant": { "auto_enabled": false },
+  "cooldown_secs": 60
+}

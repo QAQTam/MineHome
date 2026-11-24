@@ -1,0 +1,11 @@
+{
+  "name": "libmijia_napi",
+  "version": "0.1.0",
+  "description": "mijia-core NAPI bindings (ohos-rs)",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {},
+  "dynamicDependencies": {}
+}

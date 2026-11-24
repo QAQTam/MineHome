@@ -1,0 +1,44 @@
+# ADR-0024 实现（server 侧已在真机闭环：四工具 + 策略层 + mijia-core 云侧读写 +
+# 审计/幂等/冷却/带外批准）。daemon / qaqh-mcp 侧接线仍未做，见 DESIGN.md §11 与
+# D:\Projects\qaqh-backend\docs\adr\0024-home-control-mcp-transport.md 落地清单。
+# 独立进程 crate：不加入 qaqh-backend workspace，避免改动 LTS Cargo.lock / 版本戳。
+[package]
+name = "home-control-mcp"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "ADR-0024: capability-scoped MCP server for Mijia hardware actuation (stdio, MCP 2026-07-28 stateless)"
+
+[dependencies]
+# 已实测闭环的米家协议内核（同仓，纯 Rust，无鸿蒙 API）。
+# cloud.rs 由 `HomeCloud for MijiaCloud` 调用 MiHome 的 get/set_properties。
+mijia-core = { path = "../mijia-core" }
+
+# 版本必须与 qaqh-backend/Cargo.lock 的 rmcp 3.9.0 对齐，否则会出现两个
+# ServiceExt / ProtocolVersion 类型（qaqh-mcp/Cargo.toml:29-33 的同类事故）。
+# features 必须显式列全（docs.rs rmcp 3.9.0 Feature Flags 已核实）：
+#   server / macros 虽是 default，但 default-features=false 时不会自动开；
+#   schemars 不是 default；transport-io 是 server-side stdio。
+# 精确锁 `=3.9.0`：写 "3.9.0" 会被 ^ 解析到 3.10.0（首次 cargo check 实测），
+# 与 qaqh-backend/Cargo.lock 的 3.9.0 不一致。
+rmcp = { version = "=3.9.0", default-features = false, features = [
+    "server", "macros", "schemars", "transport-io",
+] }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+schemars = "1"
+thiserror = "2"
+async-trait = "0.1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+
+[dev-dependencies]
+# DESIGN.md §10.5/§10.6 的客户端半边：`tests/era_auto_client.rs` 用**真 rmcp 客户端**
+# （lifecycle 参数逐字照抄 qaqh-mcp `adapter.rs::auto_lifecycle()`）连本 server 的
+# stdio 子进程，把「era 配对」从注释声明变成编译期+运行期双向锁死的事实。
+# 只进 dev-deps：生产二进制不链接 client / 子进程侧代码。
+# features 必须显式列全（default-features=false 时 client 不会自动开）。
+rmcp = { version = "=3.9.0", default-features = false, features = [
+    "client", "transport-child-process",
+] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "process", "time"] }

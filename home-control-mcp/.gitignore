@@ -1,0 +1,6 @@
+# 本地策略/凭据/审计：绝不入版本库（DESIGN.md §7）
+policy.json
+approvals.txt
+audit.jsonl
+pending.jsonl
+target/

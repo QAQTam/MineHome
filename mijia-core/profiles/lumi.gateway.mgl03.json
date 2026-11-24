@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "model": "lumi.gateway.mgl03",
+  "category": "gateway",
+  "scrub": "synthetic",
+  "values": [],
+  "expect": {
+    "items": [
+      "toggle:6:6",
+      "status_text:3:1"
+    ],
+    "quick_switch": false,
+    "quick_switch_reason": "blocked_infra",
+    "control_services_excluded": true
+  },
+  "release": {
+    "quick_switch": false,
+    "confirmed_by": "",
+    "policy": "只读先行：打开需人工确认并在 confirmed_by 记录确认人/日期"
+  }
+}

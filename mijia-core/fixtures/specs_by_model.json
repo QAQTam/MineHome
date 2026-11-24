@@ -1,0 +1,5078 @@
+{
+ "cuco.plug.cp1": {
+  "model": "cuco.plug.cp1",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "switch.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "CurrentFirmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": []
+  }
+ },
+ "dmaker.fan.p5c": {
+  "model": "dmaker.fan.p5c",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "fan.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Fan Level",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "1挡",
+       "description": "Level1",
+       "value": 1
+      },
+      {
+       "comment": "2挡",
+       "description": "Level2",
+       "value": 2
+      },
+      {
+       "comment": "3挡",
+       "description": "Level3",
+       "value": 3
+      },
+      {
+       "comment": "4挡",
+       "description": "Level4",
+       "value": 4
+      }
+     ],
+     "name": "fan.fan-level",
+     "piid": 2,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "直吹风",
+       "description": "Straight Wind",
+       "value": 0
+      },
+      {
+       "comment": "自然风",
+       "description": "Natural Wind",
+       "value": 1
+      }
+     ],
+     "name": "fan.mode",
+     "piid": 3,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Horizontal Swing",
+     "format": "bool",
+     "list": null,
+     "name": "fan.horizontal-swing",
+     "piid": 4,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Horizontal Swing Included Angle",
+     "format": "uint16",
+     "list": [
+      {
+       "description": "30",
+       "value": 30
+      },
+      {
+       "description": "60",
+       "value": 60
+      },
+      {
+       "description": "90",
+       "value": 90
+      },
+      {
+       "description": "120",
+       "value": 120
+      },
+      {
+       "description": "140",
+       "value": 140
+      }
+     ],
+     "name": "fan.horizontal-swing-included-angle",
+     "piid": 5,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "indicator-light.on",
+     "piid": 1,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Alarm",
+     "format": "bool",
+     "list": null,
+     "name": "alarm.alarm",
+     "piid": 1,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Physical Control Locked",
+     "format": "bool",
+     "list": null,
+     "name": "physical-controls-locked.physical-controls-locked",
+     "piid": 1,
+     "range": null,
+     "siid": 7,
+     "unit": ""
+    },
+    {
+     "desc": "off-delay-time",
+     "format": "uint16",
+     "list": null,
+     "name": "off-delay-time.off-delay-time",
+     "piid": 1,
+     "range": [
+      0,
+      480,
+      1
+     ],
+     "siid": 3,
+     "unit": "minutes"
+    },
+    {
+     "desc": "speed-level",
+     "format": "uint8",
+     "list": null,
+     "name": "dm-service.speed-level",
+     "piid": 1,
+     "range": [
+      1,
+      100,
+      1
+     ],
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "start-left",
+     "format": "bool",
+     "list": null,
+     "name": "dm-service.start-left",
+     "piid": 3,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "start-right",
+     "format": "bool",
+     "list": null,
+     "name": "dm-service.start-right",
+     "piid": 4,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "dm-service.natural-list",
+     "piid": 5,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "dm-service.natural-e",
+     "piid": 6,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "dm-service.natural-f",
+     "piid": 7,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "dm-service.natural-g",
+     "piid": 8,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "dm-service.natural-h",
+     "piid": 9,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device ID",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-no",
+     "piid": 5,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Status",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "12V供电",
+       "description": "12",
+       "value": 0
+      },
+      {
+       "comment": "9V供电",
+       "description": "9",
+       "value": 1
+      },
+      {
+       "comment": "5V供电",
+       "description": "5",
+       "value": 2
+      }
+     ],
+     "name": "fan.status",
+     "piid": 6,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    }
+   ]
+  }
+ },
+ "hmpace.motion.v6": {
+  "model": "hmpace.motion.v6",
+  "stats": {
+   "control": [],
+   "meta": [],
+   "notify_only": [],
+   "observe": []
+  }
+ },
+ "isa.camera.hlc7": {
+  "model": "isa.camera.hlc7",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "camera-control.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Image Rollover",
+     "format": "uint16",
+     "list": null,
+     "name": "camera-control.image-rollover",
+     "piid": 2,
+     "range": [
+      0,
+      360,
+      180
+     ],
+     "siid": 2,
+     "unit": "arcdegrees"
+    },
+    {
+     "desc": "Night Shot",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关",
+       "description": "Off",
+       "value": 0
+      },
+      {
+       "comment": "开",
+       "description": "On",
+       "value": 1
+      },
+      {
+       "comment": "自动",
+       "description": "Auto",
+       "value": 2
+      }
+     ],
+     "name": "camera-control.night-shot",
+     "piid": 3,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Time Watermark",
+     "format": "bool",
+     "list": null,
+     "name": "camera-control.time-watermark",
+     "piid": 4,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Recording Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "持续录像",
+       "description": "Continue Record",
+       "value": 0
+      },
+      {
+       "comment": "动态录像",
+       "description": "Dynamic Record",
+       "value": 1
+      },
+      {
+       "comment": "停止录像",
+       "description": "Stop Record",
+       "value": 2
+      }
+     ],
+     "name": "camera-control.recording-mode",
+     "piid": 7,
+     "range": null,
+     "siid": 2,
+     "unit": "none"
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "indicator-light.on",
+     "piid": 1,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Motion Detection",
+     "format": "bool",
+     "list": null,
+     "name": "motion-detection.motion-detection",
+     "piid": 1,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Alarm Interval",
+     "format": "uint8",
+     "list": null,
+     "name": "motion-detection.alarm-interval",
+     "piid": 2,
+     "range": [
+      1,
+      30,
+      1
+     ],
+     "siid": 5,
+     "unit": "minutes"
+    },
+    {
+     "desc": "Detection Sensitivity",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "低",
+       "description": "Low",
+       "value": 1
+      },
+      {
+       "comment": "高",
+       "description": "Middle",
+       "value": 2
+      },
+      {
+       "comment": "中间",
+       "description": "Hight",
+       "value": 3
+      }
+     ],
+     "name": "motion-detection.detection-sensitivity",
+     "piid": 3,
+     "range": null,
+     "siid": 5,
+     "unit": "none"
+    },
+    {
+     "desc": "Motion Detection Start Time",
+     "format": "string",
+     "list": null,
+     "name": "motion-detection.motion-detection-start-time",
+     "piid": 4,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Motion Detection End Time",
+     "format": "string",
+     "list": null,
+     "name": "motion-detection.motion-detection-end-time",
+     "piid": 5,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "hl-set-timezone",
+     "format": "int32",
+     "list": null,
+     "name": "other-functions.hl-set-timezone",
+     "piid": 2,
+     "range": [
+      -12,
+      12,
+      1
+     ],
+     "siid": 6,
+     "unit": "none"
+    },
+    {
+     "desc": "hl-set-rect",
+     "format": "bool",
+     "list": null,
+     "name": "other-functions.hl-set-rect",
+     "piid": 3,
+     "range": null,
+     "siid": 6,
+     "unit": "none"
+    },
+    {
+     "desc": "hl-set-custom-voice",
+     "format": "string",
+     "list": null,
+     "name": "other-functions.hl-set-custom-voice",
+     "piid": 5,
+     "range": null,
+     "siid": 6,
+     "unit": "none"
+    },
+    {
+     "desc": "hl-download-voice",
+     "format": "string",
+     "list": null,
+     "name": "other-functions.hl-download-voice",
+     "piid": 6,
+     "range": null,
+     "siid": 6,
+     "unit": "none"
+    },
+    {
+     "desc": "hl-delete-voice",
+     "format": "string",
+     "list": null,
+     "name": "other-functions.hl-delete-voice",
+     "piid": 7,
+     "range": null,
+     "siid": 6,
+     "unit": "none"
+    },
+    {
+     "desc": "hl-voice-switch",
+     "format": "bool",
+     "list": null,
+     "name": "other-functions.hl-voice-switch",
+     "piid": 8,
+     "range": null,
+     "siid": 6,
+     "unit": "none"
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device ID",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-no",
+     "piid": 5,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Status",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "正常",
+       "description": "SD-Nomal",
+       "value": 0
+      },
+      {
+       "comment": "未插入",
+       "description": "SD-No-Inset",
+       "value": 1
+      },
+      {
+       "comment": "设备空间不足",
+       "description": "SD-No-Space",
+       "value": 2
+      },
+      {
+       "comment": "设备异常",
+       "description": "SD-No-Work",
+       "value": 3
+      },
+      {
+       "comment": "正在格式化",
+       "description": "SD-Format",
+       "value": 4
+      },
+      {
+       "comment": "设备已弹出",
+       "description": "SD-Out",
+       "value": 5
+      }
+     ],
+     "name": "memory-card-management.status",
+     "piid": 1,
+     "range": null,
+     "siid": 4,
+     "unit": "none"
+    },
+    {
+     "desc": "Storage Total Space",
+     "format": "int32",
+     "list": null,
+     "name": "memory-card-management.storage-total-space",
+     "piid": 2,
+     "range": [
+      0,
+      268435456,
+      1
+     ],
+     "siid": 4,
+     "unit": "none"
+    },
+    {
+     "desc": "Storage Free Space",
+     "format": "int32",
+     "list": null,
+     "name": "memory-card-management.storage-free-space",
+     "piid": 3,
+     "range": [
+      0,
+      268435456,
+      1
+     ],
+     "siid": 4,
+     "unit": "none"
+    },
+    {
+     "desc": "Storage Used Space",
+     "format": "int32",
+     "list": null,
+     "name": "memory-card-management.storage-used-space",
+     "piid": 4,
+     "range": [
+      0,
+      268435456,
+      1
+     ],
+     "siid": 4,
+     "unit": "none"
+    },
+    {
+     "desc": "Stream Status",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "可用",
+       "description": "Available",
+       "value": 1
+      },
+      {
+       "comment": "使用中",
+       "description": "In use",
+       "value": 2
+      },
+      {
+       "comment": "不可用",
+       "description": "Unavailable",
+       "value": 3
+      }
+     ],
+     "name": "camera-stream-for-amazon-alexa.stream-status",
+     "piid": 9,
+     "range": null,
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "Stream Status",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "可用",
+       "description": "Available",
+       "value": 1
+      },
+      {
+       "comment": "使用中",
+       "description": "In use",
+       "value": 2
+      },
+      {
+       "comment": "不可用",
+       "description": "Unavailable",
+       "value": 3
+      }
+     ],
+     "name": "camera-stream-for-google-home.stream-status",
+     "piid": 9,
+     "range": null,
+     "siid": 9,
+     "unit": ""
+    },
+    {
+     "desc": "hl-get-custom-voice",
+     "format": "string",
+     "list": null,
+     "name": "other-functions.hl-get-custom-voice",
+     "piid": 4,
+     "range": null,
+     "siid": 6,
+     "unit": "none"
+    },
+    {
+     "desc": "hl-get-max-connect",
+     "format": "bool",
+     "list": null,
+     "name": "other-functions.hl-get-max-connect",
+     "piid": 9,
+     "range": null,
+     "siid": 6,
+     "unit": ""
+    }
+   ]
+  }
+ },
+ "isa.magnet.dw2hl": {
+  "model": "isa.magnet.dw2hl",
+  "stats": {
+   "control": [],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Illumination",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Weak",
+       "value": 1
+      },
+      {
+       "description": "Strong",
+       "value": 2
+      }
+     ],
+     "name": "magnet-sensor.illumination",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Contact State",
+     "format": "bool",
+     "list": null,
+     "name": "magnet-sensor.contact-state",
+     "piid": 2,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Battery Level",
+     "format": "uint8",
+     "list": null,
+     "name": "battery.battery-level",
+     "piid": 1,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 3,
+     "unit": "percentage"
+    }
+   ]
+  }
+ },
+ "linp.sensor_occupy.hb01": {
+  "model": "linp.sensor_occupy.hb01",
+  "stats": {
+   "control": [
+    {
+     "desc": "No One Determine Time",
+     "format": "uint16",
+     "list": null,
+     "name": "occupancy-sensor.no-one-determine-time",
+     "piid": 2,
+     "range": [
+      0,
+      10000,
+      1
+     ],
+     "siid": 2,
+     "unit": "seconds"
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "indicator-light.on",
+     "piid": 1,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "uint8",
+     "list": null,
+     "name": "vendor.shielding-distance",
+     "piid": 2,
+     "range": [
+      0,
+      255,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "uint8",
+     "list": null,
+     "name": "vendor.approach-distance",
+     "piid": 4,
+     "range": [
+      1,
+      5,
+      1
+     ],
+     "siid": 3,
+     "unit": "metre"
+    },
+    {
+     "desc": "someone-judge-time",
+     "format": "uint16",
+     "list": null,
+     "name": "vendor.someone-judge-time",
+     "piid": 5,
+     "range": [
+      0,
+      60000,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "sensitivity",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Low",
+       "description": "Low",
+       "value": 0
+      },
+      {
+       "comment": "Middle",
+       "description": "Middle",
+       "value": 1
+      },
+      {
+       "comment": "High",
+       "description": "High",
+       "value": 2
+      },
+      {
+       "comment": "User-defined",
+       "description": "User-defined",
+       "value": 3
+      }
+     ],
+     "name": "vendor.sensitivity",
+     "piid": 8,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "move-threshold-high",
+     "format": "uint32",
+     "list": null,
+     "name": "vendor.move-threshold-high",
+     "piid": 9,
+     "range": [
+      0,
+      4294967295,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "move-threshold-low",
+     "format": "uint32",
+     "list": null,
+     "name": "vendor.move-threshold-low",
+     "piid": 10,
+     "range": [
+      0,
+      4294967295,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "miro-move-high",
+     "format": "uint32",
+     "list": null,
+     "name": "vendor.miro-move-high",
+     "piid": 11,
+     "range": [
+      0,
+      4294967295,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "miro-move-low",
+     "format": "uint32",
+     "list": null,
+     "name": "vendor.miro-move-low",
+     "piid": 12,
+     "range": [
+      0,
+      4294967295,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "RADAR-ON",
+       "description": "RADAR-ON",
+       "value": 0
+      },
+      {
+       "comment": "RADAR-OFF",
+       "description": "RADAR-OFF",
+       "value": 1
+      }
+     ],
+     "name": "vendor.radar-function-onoff",
+     "piid": 31,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "approach-event-onoff",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "APPROACH-ON",
+       "description": "APPROACH-ON",
+       "value": 0
+      },
+      {
+       "comment": "APPROACH-OFF",
+       "description": "APPROACH-OFF",
+       "value": 1
+      }
+     ],
+     "name": "vendor.approach-event-onoff",
+     "piid": 32,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "One Region",
+       "description": "One Region",
+       "value": 0
+      },
+      {
+       "comment": "Two Region",
+       "description": "Two Region",
+       "value": 1
+      },
+      {
+       "comment": "Three Region",
+       "description": "Three Region",
+       "value": 2
+      }
+     ],
+     "name": "vendor.human-trigger-lv",
+     "piid": 34,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "ON",
+       "description": "ON",
+       "value": 0
+      },
+      {
+       "comment": "OFF",
+       "description": "OFF",
+       "value": 1
+      }
+     ],
+     "name": "vendor.distance-display-en",
+     "piid": 35,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [
+    {
+     "desc": "distance-bitmap",
+     "format": "uint16",
+     "list": null,
+     "name": "vendor.distance-bitmap",
+     "piid": 24,
+     "range": [
+      0,
+      65535,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    }
+   ],
+   "observe": [
+    {
+     "desc": "Occupancy Status",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "无人",
+       "description": "No One",
+       "value": 0
+      },
+      {
+       "comment": "有人",
+       "description": "Has One",
+       "value": 1
+      },
+      {
+       "comment": "none",
+       "description": "None",
+       "value": 2
+      },
+      {
+       "comment": "none",
+       "description": "None",
+       "value": 3
+      }
+     ],
+     "name": "occupancy-sensor.occupancy-status",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Has Someone Duration",
+     "format": "uint8",
+     "list": null,
+     "name": "occupancy-sensor.has-someone-duration",
+     "piid": 3,
+     "range": [
+      0,
+      255,
+      1
+     ],
+     "siid": 2,
+     "unit": "minutes"
+    },
+    {
+     "desc": "No One Duration",
+     "format": "uint8",
+     "list": null,
+     "name": "occupancy-sensor.no-one-duration",
+     "piid": 4,
+     "range": [
+      0,
+      255,
+      1
+     ],
+     "siid": 2,
+     "unit": "minutes"
+    },
+    {
+     "desc": "Illumination",
+     "format": "float",
+     "list": null,
+     "name": "occupancy-sensor.illumination",
+     "piid": 5,
+     "range": [
+      0,
+      10000,
+      1
+     ],
+     "siid": 2,
+     "unit": "lux"
+    },
+    {
+     "desc": "approach-aloof",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Stop",
+       "description": "Stop",
+       "value": 0
+      },
+      {
+       "comment": "Approach",
+       "description": "Approach",
+       "value": 1
+      },
+      {
+       "comment": "Aloof",
+       "description": "Aloof",
+       "value": 2
+      }
+     ],
+     "name": "vendor.approach-aloof",
+     "piid": 1,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "float",
+     "list": null,
+     "name": "vendor.body-distance",
+     "piid": 3,
+     "range": [
+      0,
+      6,
+      0.01
+     ],
+     "siid": 3,
+     "unit": "metre"
+    },
+    {
+     "desc": "real-time-bitmap",
+     "format": "uint16",
+     "list": null,
+     "name": "vendor.real-time-bitmap",
+     "piid": 33,
+     "range": [
+      0,
+      65535,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Seq-Safe",
+       "description": "Seq-Safe",
+       "value": 0
+      },
+      {
+       "comment": "Seq-Near-Overflow",
+       "description": "Seq-Near-Overflow",
+       "value": 1
+      }
+     ],
+     "name": "vendor.is-seq-near-overflow",
+     "piid": 37,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    }
+   ]
+  }
+ },
+ "lumi.acpartner.mcn02": {
+  "model": "lumi.acpartner.mcn02",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Auto",
+       "value": 0
+      },
+      {
+       "description": "Cool",
+       "value": 1
+      },
+      {
+       "description": "Dry",
+       "value": 2
+      },
+      {
+       "description": "Heat",
+       "value": 3
+      },
+      {
+       "description": "Fan",
+       "value": 4
+      }
+     ],
+     "name": "air-conditioner.mode",
+     "piid": 2,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Target Temperature",
+     "format": "float",
+     "list": null,
+     "name": "air-conditioner.target-temperature",
+     "piid": 3,
+     "range": [
+      16,
+      30,
+      1
+     ],
+     "siid": 2,
+     "unit": "celsius"
+    },
+    {
+     "desc": "Fan Level",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Auto",
+       "value": 0
+      },
+      {
+       "description": "Low",
+       "value": 1
+      },
+      {
+       "description": "Medium",
+       "value": 2
+      },
+      {
+       "description": "High",
+       "value": 3
+      }
+     ],
+     "name": "fan-control.fan-level",
+     "piid": 1,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Vertical Swing",
+     "format": "bool",
+     "list": null,
+     "name": "fan-control.vertical-swing",
+     "piid": 2,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Match State",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Out Of Matching",
+       "value": 0
+      },
+      {
+       "description": "Matching",
+       "value": 1
+      }
+     ],
+     "name": "air-condition-outlet-matching.match-state",
+     "piid": 1,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Ac Work Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Ac Mode With Outlet",
+       "value": 0
+      },
+      {
+       "description": "Ac Mode Without Outlet",
+       "value": 1
+      }
+     ],
+     "name": "air-condition-outlet-matching.ac-work-mode",
+     "piid": 2,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Ac State",
+     "format": "string",
+     "list": null,
+     "name": "air-condition-outlet-matching.ac-state",
+     "piid": 3,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Electric Power",
+     "format": "float",
+     "list": null,
+     "name": "power-consumption.electric-power",
+     "piid": 1,
+     "range": [
+      0,
+      10000,
+      0.01
+     ],
+     "siid": 5,
+     "unit": "watt"
+    }
+   ]
+  }
+ },
+ "lumi.gateway.mgl03": {
+  "model": "lumi.gateway.mgl03",
+  "stats": {
+   "control": [
+    {
+     "desc": "enable night indicator light",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关蓝灯常亮和蓝灯闪烁状态",
+       "description": "关蓝灯常亮和蓝灯闪烁状态",
+       "value": 0
+      },
+      {
+       "comment": "指示灯按正常逻辑显示",
+       "description": "指示灯按正常逻辑显示",
+       "value": 1
+      }
+     ],
+     "name": "indicator-light.on",
+     "piid": 6,
+     "range": null,
+     "siid": 6,
+     "unit": ""
+    },
+    {
+     "desc": "arming-mode",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "basic_arming",
+       "description": "basic_arming",
+       "value": 0
+      },
+      {
+       "comment": "home_arming",
+       "description": "home_arming",
+       "value": 1
+      },
+      {
+       "comment": "away_arming",
+       "description": "away_arming",
+       "value": 2
+      },
+      {
+       "comment": "sleep_arming",
+       "description": "sleep_arming",
+       "value": 3
+      }
+     ],
+     "name": "arming.arming-mode",
+     "piid": 1,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "customize-mode-1",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "arming.customize-mode-1",
+     "piid": 3,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "customize-mode-2",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "arming.customize-mode-2",
+     "piid": 4,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "customize-mode-3",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "arming.customize-mode-3",
+     "piid": 5,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "customize-mode-4",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "arming.customize-mode-4",
+     "piid": 6,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "customize-mode-5",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "arming.customize-mode-5",
+     "piid": 7,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "customize-mode-6",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "arming.customize-mode-6",
+     "piid": 8,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "基础警戒延时生效时长",
+     "format": "int32",
+     "list": null,
+     "name": "arming.delay-time-basic",
+     "piid": 9,
+     "range": [
+      0,
+      60,
+      5
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "基础报警持续时长",
+     "format": "int64",
+     "list": null,
+     "name": "arming.alarm-duration-basic",
+     "piid": 10,
+     "range": [
+      0,
+      2147483647,
+      1
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "alarm-volume-basic",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "静音",
+       "description": "静音",
+       "value": 0
+      },
+      {
+       "comment": "低音量",
+       "description": "低音量",
+       "value": 1
+      },
+      {
+       "comment": "中音量",
+       "description": "中音量",
+       "value": 2
+      },
+      {
+       "comment": "高音量",
+       "description": "高音量",
+       "value": 3
+      }
+     ],
+     "name": "arming.alarm-volume-basic",
+     "piid": 11,
+     "range": null,
+     "siid": 3,
+     "unit": "percentage"
+    },
+    {
+     "desc": "",
+     "format": "int32",
+     "list": null,
+     "name": "arming.delay-time-home",
+     "piid": 12,
+     "range": [
+      0,
+      60,
+      5
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "在家报警持续时长",
+     "format": "int64",
+     "list": null,
+     "name": "arming.alarm-duration-home",
+     "piid": 13,
+     "range": [
+      0,
+      2147483647,
+      1
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "alarm-volume-home",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "静音",
+       "description": "静音",
+       "value": 0
+      },
+      {
+       "comment": "低音量",
+       "description": "低音量",
+       "value": 1
+      },
+      {
+       "comment": "中音量",
+       "description": "中音量",
+       "value": 2
+      },
+      {
+       "comment": "高音量",
+       "description": "高音量",
+       "value": 3
+      }
+     ],
+     "name": "arming.alarm-volume-home",
+     "piid": 14,
+     "range": null,
+     "siid": 3,
+     "unit": "percentage"
+    },
+    {
+     "desc": "",
+     "format": "int32",
+     "list": null,
+     "name": "arming.delay-time-away",
+     "piid": 15,
+     "range": [
+      0,
+      60,
+      5
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "离线报警持续时长",
+     "format": "int64",
+     "list": null,
+     "name": "arming.alarm-duration-away",
+     "piid": 16,
+     "range": [
+      0,
+      2147483647,
+      1
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "alarm-volume-away",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "静音",
+       "description": "静音",
+       "value": 0
+      },
+      {
+       "comment": "低音量",
+       "description": "低音量",
+       "value": 1
+      },
+      {
+       "comment": "中音量",
+       "description": "中音量",
+       "value": 2
+      },
+      {
+       "comment": "高音量",
+       "description": "高音量",
+       "value": 3
+      }
+     ],
+     "name": "arming.alarm-volume-away",
+     "piid": 17,
+     "range": null,
+     "siid": 3,
+     "unit": "percentage"
+    },
+    {
+     "desc": "",
+     "format": "int32",
+     "list": null,
+     "name": "arming.delay-time-sleep",
+     "piid": 18,
+     "range": [
+      0,
+      60,
+      5
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "睡眠报警持续时长",
+     "format": "int64",
+     "list": null,
+     "name": "arming.alarm-duration-sleep",
+     "piid": 19,
+     "range": [
+      0,
+      2147483647,
+      1
+     ],
+     "siid": 3,
+     "unit": "seconds"
+    },
+    {
+     "desc": "alarm-volume-sleep",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "静音",
+       "description": "静音",
+       "value": 0
+      },
+      {
+       "comment": "低音量",
+       "description": "低音量",
+       "value": 1
+      },
+      {
+       "comment": "中音量",
+       "description": "中音量",
+       "value": 2
+      },
+      {
+       "comment": "高音量",
+       "description": "高音量",
+       "value": 3
+      }
+     ],
+     "name": "arming.alarm-volume-sleep",
+     "piid": 20,
+     "range": null,
+     "siid": 3,
+     "unit": "percentage"
+    },
+    {
+     "desc": "网关自带的目标警戒模式。homekit功能需要用到该属性。",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "basic_arming",
+       "description": "basic_arming",
+       "value": 0
+      },
+      {
+       "comment": "home_arming",
+       "description": "home_arming",
+       "value": 1
+      },
+      {
+       "comment": "away_arming",
+       "description": "away_arming",
+       "value": 2
+      },
+      {
+       "comment": "sleep_arming",
+       "description": "sleep_arming",
+       "value": 3
+      }
+     ],
+     "name": "arming.target-arming-mode",
+     "piid": 21,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "No alram",
+       "description": "",
+       "value": 0
+      },
+      {
+       "comment": "Security alarm",
+       "description": "",
+       "value": 1
+      },
+      {
+       "comment": "Not_Security alarm",
+       "description": "",
+       "value": 2
+      }
+     ],
+     "name": "arming.alarm",
+     "piid": 22,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "on-off",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "关闭",
+       "value": 0
+      },
+      {
+       "comment": "开启",
+       "description": "开启",
+       "value": 1
+      }
+     ],
+     "name": "accidental-deletion.on-off",
+     "piid": 1,
+     "range": null,
+     "siid": 7,
+     "unit": "none"
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [
+    {
+     "desc": "change to basic mode",
+     "format": "int32",
+     "list": [
+      {
+       "comment": "home_arming",
+       "description": "home_arming",
+       "value": 1
+      },
+      {
+       "comment": "away_arming",
+       "description": "away_arming",
+       "value": 2
+      },
+      {
+       "comment": "sleep_arming",
+       "description": "sleep_arming",
+       "value": 3
+      }
+     ],
+     "name": "arming.arming-change",
+     "piid": 2,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "arming.alarm-auto-log",
+     "piid": 23,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "button",
+     "format": "int32",
+     "list": [
+      {
+       "description": "single_click",
+       "value": 1
+      },
+      {
+       "description": "shock_click_2_times",
+       "value": 2
+      },
+      {
+       "description": "shock_click_10_times",
+       "value": 10
+      },
+      {
+       "description": "long_press_10s",
+       "value": 21
+      },
+      {
+       "description": "shock_click_3_times",
+       "value": 3
+      },
+      {
+       "description": "long_press_5s",
+       "value": 16
+      }
+     ],
+     "name": "button.button",
+     "piid": 1,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    }
+   ],
+   "observe": []
+  }
+ },
+ "lumi.sensor_switch.v2": {
+  "model": "lumi.sensor_switch.v2",
+  "stats": {
+   "control": [],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": []
+  }
+ },
+ "njcuk.fitting.ad1204": {
+  "model": "njcuk.fitting.ad1204",
+  "stats": {
+   "control": [],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device ID",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-no",
+     "piid": 5,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": []
+  }
+ },
+ "soocare.magic_touch.m14": {
+  "model": "soocare.magic_touch.m14",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "massager.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Battery Level",
+     "format": "uint8",
+     "list": null,
+     "name": "battery.battery-level",
+     "piid": 1,
+     "range": [
+      0,
+      100,
+      5
+     ],
+     "siid": 3,
+     "unit": "percentage"
+    }
+   ]
+  }
+ },
+ "xiaomi.aircondition.m4": {
+  "model": "xiaomi.aircondition.m4",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "制冷",
+       "description": "Cool",
+       "value": 2
+      },
+      {
+       "comment": "除湿",
+       "description": "Dry",
+       "value": 3
+      },
+      {
+       "comment": "风扇",
+       "description": "Fan",
+       "value": 4
+      },
+      {
+       "comment": "制热",
+       "description": "Heat",
+       "value": 5
+      }
+     ],
+     "name": "air-conditioner.mode",
+     "piid": 2,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Target Temperature",
+     "format": "float",
+     "list": null,
+     "name": "air-conditioner.target-temperature",
+     "piid": 4,
+     "range": [
+      16,
+      31,
+      0.5
+     ],
+     "siid": 2,
+     "unit": "celsius"
+    },
+    {
+     "desc": "ECO",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.eco",
+     "piid": 7,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Heater",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.heater",
+     "piid": 9,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Dryer",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.dryer",
+     "piid": 10,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Sleep Mode",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.sleep-mode",
+     "piid": 11,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Target Humidity",
+     "format": "uint8",
+     "list": null,
+     "name": "air-conditioner.target-humidity",
+     "piid": 14,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 2,
+     "unit": "percentage"
+    },
+    {
+     "desc": "Unstraight Blowing",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.un-straight-blowing",
+     "piid": 15,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Favorite On",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner.favorite-on",
+     "piid": 19,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Favorite Type",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Cloud Recommendation",
+       "description": "Cloud Recommendation",
+       "value": 0
+      },
+      {
+       "comment": "Custom",
+       "description": "Custom",
+       "value": 1
+      }
+     ],
+     "name": "air-conditioner.favorite-type",
+     "piid": 20,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Fan Level",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "自动",
+       "description": "Auto",
+       "value": 0
+      },
+      {
+       "comment": "一档",
+       "description": "Level1",
+       "value": 1
+      },
+      {
+       "comment": "二档",
+       "description": "Level2",
+       "value": 2
+      },
+      {
+       "comment": "三档",
+       "description": "Level3",
+       "value": 3
+      },
+      {
+       "comment": "四档",
+       "description": "Level4",
+       "value": 4
+      },
+      {
+       "comment": "五档",
+       "description": "Level5",
+       "value": 5
+      },
+      {
+       "comment": "六档",
+       "description": "Level6",
+       "value": 6
+      },
+      {
+       "comment": "七档",
+       "description": "Level7",
+       "value": 7
+      },
+      {
+       "comment": "null",
+       "description": "Level8",
+       "value": 8
+      }
+     ],
+     "name": "fan-control.fan-level",
+     "piid": 2,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Vertical Swing",
+     "format": "bool",
+     "list": null,
+     "name": "fan-control.vertical-swing",
+     "piid": 4,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Vertical Swing Included Angle",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "关闭",
+       "description": "Off",
+       "value": 0
+      },
+      {
+       "comment": "向上",
+       "description": "Top",
+       "value": 2
+      },
+      {
+       "comment": "中间",
+       "description": "Middle",
+       "value": 3
+      },
+      {
+       "comment": "向下",
+       "description": "Bottow",
+       "value": 4
+      },
+      {
+       "comment": "偏上",
+       "description": "Upper",
+       "value": 7
+      },
+      {
+       "comment": "偏下",
+       "description": "Lower",
+       "value": 8
+      }
+     ],
+     "name": "fan-control.vertical-swing-included-angle",
+     "piid": 6,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Alarm",
+     "format": "bool",
+     "list": null,
+     "name": "alarm.alarm",
+     "piid": 1,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "indicator-light.on",
+     "piid": 1,
+     "range": null,
+     "siid": 6,
+     "unit": ""
+    },
+    {
+     "desc": "Brightness",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "自动",
+       "description": "Auto",
+       "value": 0
+      },
+      {
+       "comment": "中亮",
+       "description": "Medium",
+       "value": 1
+      },
+      {
+       "description": "High",
+       "value": 2
+      }
+     ],
+     "name": "indicator-light.brightness",
+     "piid": 2,
+     "range": null,
+     "siid": 6,
+     "unit": "percentage"
+    },
+    {
+     "desc": "Cooling Effect",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "弱冷",
+       "description": "Weak Cold",
+       "value": 1
+      },
+      {
+       "comment": "小冷",
+       "description": "Small Cold",
+       "value": 2
+      },
+      {
+       "comment": "舒适",
+       "description": "Comfort",
+       "value": 3
+      },
+      {
+       "comment": "大冷",
+       "description": "Big Cold",
+       "value": 4
+      },
+      {
+       "comment": "强冷",
+       "description": "Strong Cold",
+       "value": 5
+      }
+     ],
+     "name": "air-conditioner-dev-mode.cooling-effect",
+     "piid": 1,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Heating Effect",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "弱暖",
+       "description": "Weak Heat",
+       "value": 1
+      },
+      {
+       "comment": "小暖",
+       "description": "Small Heat",
+       "value": 2
+      },
+      {
+       "comment": "舒适",
+       "description": "Comfort",
+       "value": 3
+      },
+      {
+       "comment": "大暖",
+       "description": "Big Heat",
+       "value": 4
+      },
+      {
+       "comment": "强暖",
+       "description": "Strong Heat",
+       "value": 5
+      }
+     ],
+     "name": "air-conditioner-dev-mode.heating-effect",
+     "piid": 2,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Relieve Air Deflector Condensation",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner-dev-mode.relieve-air-deflector-condensation",
+     "piid": 3,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Cooling Outdoor Fan Noise Reduction",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner-dev-mode.cooling-outdoor-fan-noise-reduction",
+     "piid": 4,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Cooling Indoor Fan Noise Reduction",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner-dev-mode.cooling-indoor-fan-noise-reduction",
+     "piid": 5,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Heating Outdoor Fan Noise Reduction",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner-dev-mode.heating-outdoor-fan-noise-reduction",
+     "piid": 6,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Heating Indoor Fan Noise Reduction",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner-dev-mode.heating-indoor-fan-noise-reduction",
+     "piid": 7,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "Improve Heat Tar Temp Stop",
+     "format": "bool",
+     "list": null,
+     "name": "air-conditioner-dev-mode.improve-heat-tar-temp-stop",
+     "piid": 9,
+     "range": null,
+     "siid": 25,
+     "unit": ""
+    },
+    {
+     "desc": "clean",
+     "format": "string",
+     "list": null,
+     "name": "maintenance.clean",
+     "piid": 1,
+     "range": null,
+     "siid": 9,
+     "unit": ""
+    },
+    {
+     "desc": "examine",
+     "format": "string",
+     "list": null,
+     "name": "maintenance.examine",
+     "piid": 2,
+     "range": null,
+     "siid": 9,
+     "unit": ""
+    },
+    {
+     "desc": "fan-percent",
+     "format": "uint8",
+     "list": null,
+     "name": "enhance.fan-percent",
+     "piid": 1,
+     "range": [
+      0,
+      101,
+      1
+     ],
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "timer",
+     "format": "string",
+     "list": null,
+     "name": "enhance.timer",
+     "piid": 3,
+     "range": null,
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "sleep-diy",
+     "format": "bool",
+     "list": null,
+     "name": "enhance.sleep-diy",
+     "piid": 4,
+     "range": null,
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "secondpart-of-hswing",
+     "format": "bool",
+     "list": null,
+     "name": "enhance.secondpart-of-hswing",
+     "piid": 5,
+     "range": null,
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "off-flag",
+     "format": "bool",
+     "list": null,
+     "name": "enhance.off-flag",
+     "piid": 8,
+     "range": null,
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "room-size",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Default",
+       "description": "Default",
+       "value": 0
+      },
+      {
+       "comment": "Room1",
+       "description": "Room1",
+       "value": 1
+      },
+      {
+       "comment": "Room2",
+       "description": "Room2",
+       "value": 2
+      },
+      {
+       "comment": "Room3",
+       "description": "Room3",
+       "value": 3
+      },
+      {
+       "comment": "Room4",
+       "description": "Room4",
+       "value": 4
+      },
+      {
+       "comment": "Room5",
+       "description": "Room5",
+       "value": 5
+      },
+      {
+       "comment": "Room6",
+       "description": "Room6",
+       "value": 6
+      }
+     ],
+     "name": "enhance.room-size",
+     "piid": 16,
+     "range": null,
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "bool",
+     "list": null,
+     "name": "enhance.like-diy",
+     "piid": 20,
+     "range": null,
+     "siid": 10,
+     "unit": ""
+    },
+    {
+     "desc": "longitude-latitude",
+     "format": "string",
+     "list": null,
+     "name": "machine-state.longitude-latitude",
+     "piid": 16,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "auto-cooling",
+     "format": "string",
+     "list": null,
+     "name": "single-smart-scene.auto-cooling",
+     "piid": 1,
+     "range": null,
+     "siid": 16,
+     "unit": ""
+    },
+    {
+     "desc": "automatic-heating",
+     "format": "string",
+     "list": null,
+     "name": "single-smart-scene.automatic-heating",
+     "piid": 2,
+     "range": null,
+     "siid": 16,
+     "unit": ""
+    },
+    {
+     "desc": "auto-dry",
+     "format": "string",
+     "list": null,
+     "name": "single-smart-scene.auto-dry",
+     "piid": 3,
+     "range": null,
+     "siid": 16,
+     "unit": ""
+    },
+    {
+     "desc": "run-dark-sleep",
+     "format": "bool",
+     "list": null,
+     "name": "single-smart-scene.run-dark-sleep",
+     "piid": 10,
+     "range": null,
+     "siid": 16,
+     "unit": ""
+    },
+    {
+     "desc": "mosquito-life-rest",
+     "format": "bool",
+     "list": null,
+     "name": "mosquito-repellent.mosquito-life-rest",
+     "piid": 1,
+     "range": null,
+     "siid": 19,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.inner-unit-parm",
+     "piid": 1,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-a",
+     "piid": 2,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-b",
+     "piid": 3,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-c",
+     "piid": 4,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-d",
+     "piid": 5,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-e",
+     "piid": 6,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-f",
+     "piid": 7,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-g",
+     "piid": 8,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "system-parm.outdoor-unit-parm-h",
+     "piid": 9,
+     "range": null,
+     "siid": 39,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device ID",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-no",
+     "piid": 5,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [
+    {
+     "desc": "error",
+     "format": "string",
+     "list": null,
+     "name": "maintenance.error",
+     "piid": 3,
+     "range": null,
+     "siid": 9,
+     "unit": ""
+    }
+   ],
+   "observe": [
+    {
+     "desc": "Device Fault",
+     "format": "string",
+     "list": null,
+     "name": "air-conditioner.fault",
+     "piid": 3,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Temperature",
+     "format": "float",
+     "list": null,
+     "name": "environment.temperature",
+     "piid": 7,
+     "range": [
+      -50,
+      150,
+      0.1
+     ],
+     "siid": 4,
+     "unit": "celsius"
+    },
+    {
+     "desc": "Relative Humidity",
+     "format": "uint8",
+     "list": null,
+     "name": "environment.relative-humidity",
+     "piid": 9,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 4,
+     "unit": "percentage"
+    },
+    {
+     "desc": "Filter Life Level",
+     "format": "uint8",
+     "list": null,
+     "name": "filter.filter-life-level",
+     "piid": 1,
+     "range": [
+      0,
+      101,
+      1
+     ],
+     "siid": 21,
+     "unit": "percentage"
+    },
+    {
+     "desc": "time-count",
+     "format": "uint16",
+     "list": null,
+     "name": "electricity.time-count",
+     "piid": 5,
+     "range": [
+      0,
+      9999,
+      1
+     ],
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "total-battery",
+     "format": "float",
+     "list": null,
+     "name": "electricity.total-battery",
+     "piid": 6,
+     "range": [
+      0,
+      999999.99,
+      0.01
+     ],
+     "siid": 8,
+     "unit": ""
+    },
+    {
+     "desc": "running-duration",
+     "format": "float",
+     "list": null,
+     "name": "maintenance.running-duration",
+     "piid": 5,
+     "range": [
+      0,
+      876000,
+      0.1
+     ],
+     "siid": 9,
+     "unit": ""
+    },
+    {
+     "desc": "clean-process",
+     "format": "uint8",
+     "list": null,
+     "name": "maintenance.clean-process",
+     "piid": 6,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 9,
+     "unit": "percentage"
+    },
+    {
+     "desc": "humidity-range",
+     "format": "string",
+     "list": null,
+     "name": "enhance.humidity-range",
+     "piid": 6,
+     "range": null,
+     "siid": 10,
+     "unit": "percentage"
+    },
+    {
+     "desc": "tp-and-humidity",
+     "format": "float",
+     "list": null,
+     "name": "enhance.tp-and-humidity",
+     "piid": 9,
+     "range": [
+      -50,
+      150,
+      0.1
+     ],
+     "siid": 10,
+     "unit": "celsius"
+    },
+    {
+     "desc": "indoor-pipe-temp",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.indoor-pipe-temp",
+     "piid": 1,
+     "range": [
+      -50,
+      150,
+      0.1
+     ],
+     "siid": 12,
+     "unit": "celsius"
+    },
+    {
+     "desc": "indoor-fan-speed",
+     "format": "uint16",
+     "list": null,
+     "name": "machine-state.indoor-fan-speed",
+     "piid": 3,
+     "range": [
+      0,
+      2000,
+      1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "real-heater-switch",
+     "format": "bool",
+     "list": null,
+     "name": "machine-state.real-heater-switch",
+     "piid": 4,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "realindoor-fan-lever",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Lever1",
+       "description": "Lever1",
+       "value": 1
+      },
+      {
+       "comment": "Lever2",
+       "description": "Lever2",
+       "value": 2
+      },
+      {
+       "comment": "Lever3",
+       "description": "Lever3",
+       "value": 3
+      },
+      {
+       "comment": "Lever4",
+       "description": "Lever4",
+       "value": 4
+      },
+      {
+       "comment": "Lever5",
+       "description": "Lever5",
+       "value": 5
+      },
+      {
+       "comment": "Lever6",
+       "description": "Lever6",
+       "value": 6
+      },
+      {
+       "comment": "Lever7",
+       "description": "Lever7",
+       "value": 7
+      },
+      {
+       "comment": "Lever8",
+       "description": "Lever8",
+       "value": 8
+      },
+      {
+       "comment": "Lever9",
+       "description": "Lever9",
+       "value": 9
+      },
+      {
+       "comment": "Lever0",
+       "description": "Lever0",
+       "value": 0
+      }
+     ],
+     "name": "machine-state.realindoor-fan-lever",
+     "piid": 5,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "lightactivated-level",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Off",
+       "description": "Off",
+       "value": 0
+      },
+      {
+       "comment": "Middle Light",
+       "description": "Middle Light",
+       "value": 1
+      },
+      {
+       "comment": "High Light",
+       "description": "High Light",
+       "value": 2
+      }
+     ],
+     "name": "machine-state.lightactivated-level",
+     "piid": 6,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "outdoor-temp",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.outdoor-temp",
+     "piid": 7,
+     "range": [
+      -100,
+      150,
+      0.1
+     ],
+     "siid": 12,
+     "unit": "celsius"
+    },
+    {
+     "desc": "outdoor-pipe-temp",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.outdoor-pipe-temp",
+     "piid": 8,
+     "range": [
+      -100,
+      200,
+      0.1
+     ],
+     "siid": 12,
+     "unit": "celsius"
+    },
+    {
+     "desc": "outdoor-exhaust-temp",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.outdoor-exhaust-temp",
+     "piid": 9,
+     "range": [
+      -100,
+      200,
+      0.1
+     ],
+     "siid": 12,
+     "unit": "celsius"
+    },
+    {
+     "desc": "outdoor-fan-lever",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "Lever0",
+       "description": "Lever0",
+       "value": 0
+      },
+      {
+       "comment": "Lever1",
+       "description": "Lever1",
+       "value": 1
+      },
+      {
+       "comment": "Lever2",
+       "description": "Lever2",
+       "value": 2
+      },
+      {
+       "comment": "Lever3",
+       "description": "Lever3",
+       "value": 3
+      },
+      {
+       "comment": "Lever4",
+       "description": "Lever4",
+       "value": 4
+      },
+      {
+       "comment": "Lever5",
+       "description": "Lever5",
+       "value": 5
+      },
+      {
+       "comment": "Lever6",
+       "description": "Lever6",
+       "value": 6
+      },
+      {
+       "comment": "Lever7",
+       "description": "Lever7",
+       "value": 7
+      },
+      {
+       "comment": "Lever8",
+       "description": "Lever8",
+       "value": 8
+      },
+      {
+       "comment": "Lever9",
+       "description": "Lever9",
+       "value": 9
+      }
+     ],
+     "name": "machine-state.outdoor-fan-lever",
+     "piid": 10,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "compressor-frequency",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.compressor-frequency",
+     "piid": 11,
+     "range": [
+      0,
+      200,
+      1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "fourway-valve-switch",
+     "format": "bool",
+     "list": null,
+     "name": "machine-state.fourway-valve-switch",
+     "piid": 12,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "outdoor-mach-current",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.outdoor-mach-current",
+     "piid": 13,
+     "range": [
+      0,
+      100,
+      0.1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "outdoor-mach-voltage",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.outdoor-mach-voltage",
+     "piid": 14,
+     "range": [
+      0,
+      1000,
+      1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "expansion-valve",
+     "format": "uint16",
+     "list": null,
+     "name": "machine-state.expansion-valve",
+     "piid": 15,
+     "range": [
+      0,
+      1000,
+      1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "air-fresh-fan-speed",
+     "format": "uint16",
+     "list": null,
+     "name": "machine-state.air-fresh-fan-speed",
+     "piid": 17,
+     "range": [
+      0,
+      5000,
+      1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "dew-point-temper",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.dew-point-temper",
+     "piid": 21,
+     "range": [
+      -100,
+      200,
+      0.1
+     ],
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "version",
+     "format": "string",
+     "list": null,
+     "name": "machine-state.version",
+     "piid": 22,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "external-serial-no",
+     "format": "string",
+     "list": null,
+     "name": "machine-state.external-serial-no",
+     "piid": 23,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "bk-serial-no",
+     "format": "string",
+     "list": null,
+     "name": "machine-state.bk-serial-no",
+     "piid": 24,
+     "range": null,
+     "siid": 12,
+     "unit": ""
+    },
+    {
+     "desc": "",
+     "format": "float",
+     "list": null,
+     "name": "machine-state.module-temp",
+     "piid": 25,
+     "range": [
+      0,
+      200,
+      0.1
+     ],
+     "siid": 12,
+     "unit": "celsius"
+    },
+    {
+     "desc": "fault-value",
+     "format": "int16",
+     "list": [
+      {
+       "comment": "No Failure",
+       "description": "No Failure",
+       "value": 0
+      },
+      {
+       "comment": "F2.4",
+       "description": "F2.4",
+       "value": 4
+      },
+      {
+       "comment": "F3.2",
+       "description": "F3.2",
+       "value": 5
+      },
+      {
+       "comment": "P1",
+       "description": "P1",
+       "value": 6
+      },
+      {
+       "comment": "P2.1",
+       "description": "P2.1",
+       "value": 7
+      },
+      {
+       "comment": "P2.2",
+       "description": "P2.2",
+       "value": 8
+      },
+      {
+       "comment": "P2.3",
+       "description": "P2.3",
+       "value": 9
+      },
+      {
+       "comment": "P2.4",
+       "description": "P2.4",
+       "value": 10
+      },
+      {
+       "comment": "P2.5",
+       "description": "P2.5",
+       "value": 11
+      },
+      {
+       "comment": "P4",
+       "description": "P4",
+       "value": 12
+      },
+      {
+       "comment": "P5",
+       "description": "P5",
+       "value": 13
+      },
+      {
+       "comment": "P6",
+       "description": "P6",
+       "value": 14
+      },
+      {
+       "comment": "P8",
+       "description": "P8",
+       "value": 15
+      },
+      {
+       "comment": "PA",
+       "description": "PA",
+       "value": 16
+      },
+      {
+       "comment": "PC",
+       "description": "PC",
+       "value": 17
+      },
+      {
+       "comment": "U2",
+       "description": "U2",
+       "value": 18
+      },
+      {
+       "comment": "U3",
+       "description": "U3",
+       "value": 19
+      },
+      {
+       "comment": "U4",
+       "description": "U4",
+       "value": 20
+      },
+      {
+       "comment": "U5",
+       "description": "U5",
+       "value": 21
+      },
+      {
+       "comment": "U6.1",
+       "description": "U6.1",
+       "value": 22
+      },
+      {
+       "comment": "U6.2",
+       "description": "U6.2",
+       "value": 23
+      },
+      {
+       "comment": "U8",
+       "description": "U8",
+       "value": 24
+      },
+      {
+       "comment": "U0",
+       "description": "U0",
+       "value": 25
+      },
+      {
+       "comment": "C1",
+       "description": "C1",
+       "value": 26
+      },
+      {
+       "comment": "C2",
+       "description": "C2",
+       "value": 27
+      },
+      {
+       "comment": "C3",
+       "description": "C3",
+       "value": 28
+      },
+      {
+       "comment": "C4",
+       "description": "C4",
+       "value": 29
+      },
+      {
+       "comment": "C5",
+       "description": "C5",
+       "value": 30
+      },
+      {
+       "comment": "F2.4 CLEAR",
+       "description": "F2.4 CLEAR",
+       "value": -4
+      },
+      {
+       "comment": "F3.2 CLEAR",
+       "description": "F3.2 CLEAR",
+       "value": -5
+      },
+      {
+       "comment": "P1 CLEAR",
+       "description": "P1 CLEAR",
+       "value": -6
+      },
+      {
+       "comment": "P2.1 CLEAR",
+       "description": "P2.1 CLEAR",
+       "value": -7
+      },
+      {
+       "comment": "P2.2 CLEAR",
+       "description": "P2.2 CLEAR",
+       "value": -8
+      },
+      {
+       "comment": "P2.3 CLEAR",
+       "description": "P2.3 CLEAR",
+       "value": -9
+      },
+      {
+       "comment": "P2.4 CLEAR",
+       "description": "P2.4 CLEAR",
+       "value": -10
+      },
+      {
+       "comment": "P2.5 CLEAR",
+       "description": "P2.5 CLEAR",
+       "value": -11
+      },
+      {
+       "comment": "P4 CLEAR",
+       "description": "P4 CLEAR",
+       "value": -12
+      },
+      {
+       "comment": "P5 CLEAR",
+       "description": "P5 CLEAR",
+       "value": -13
+      },
+      {
+       "comment": "P6 CLEAR",
+       "description": "P6 CLEAR",
+       "value": -14
+      },
+      {
+       "comment": "P8 CLEAR",
+       "description": "P8 CLEAR",
+       "value": -15
+      },
+      {
+       "comment": "PA CLEAR",
+       "description": "PA CLEAR",
+       "value": -16
+      },
+      {
+       "comment": "PC CLEAR",
+       "description": "PC CLEAR",
+       "value": -17
+      },
+      {
+       "comment": "U2 CLEAR",
+       "description": "U2 CLEAR",
+       "value": -18
+      },
+      {
+       "comment": "U3 CLEAR",
+       "description": "U3 CLEAR",
+       "value": -19
+      },
+      {
+       "comment": "U4 CLEAR",
+       "description": "U4 CLEAR",
+       "value": -20
+      },
+      {
+       "comment": "U5 CLEAR",
+       "description": "U5 CLEAR",
+       "value": -21
+      },
+      {
+       "comment": "U6.1 CLEAR",
+       "description": "U6.1 CLEAR",
+       "value": -22
+      },
+      {
+       "comment": "U6.2 CLEAR",
+       "description": "U6.2 CLEAR",
+       "value": -23
+      },
+      {
+       "comment": "U8 CLEAR",
+       "description": "U8 CLEAR",
+       "value": -24
+      },
+      {
+       "comment": "U0 CLEAR",
+       "description": "U0 CLEAR",
+       "value": -25
+      },
+      {
+       "comment": "C1 CLEAR",
+       "description": "C1 CLEAR",
+       "value": -26
+      },
+      {
+       "comment": "C2 CLEAR",
+       "description": "C2 CLEAR",
+       "value": -27
+      },
+      {
+       "comment": "C3 CLEAR",
+       "description": "C3 CLEAR",
+       "value": -28
+      },
+      {
+       "comment": "C4 CLEAR",
+       "description": "C4 CLEAR",
+       "value": -29
+      },
+      {
+       "comment": "C5 CLEAR",
+       "description": "C5 CLEAR",
+       "value": -30
+      },
+      {
+       "comment": "U1.3",
+       "description": "U1.3",
+       "value": 31
+      },
+      {
+       "comment": "U4",
+       "description": "U4",
+       "value": 32
+      },
+      {
+       "comment": "E2",
+       "description": "E2",
+       "value": 33
+      },
+      {
+       "comment": "E2",
+       "description": "E2",
+       "value": 34
+      },
+      {
+       "comment": "E2",
+       "description": "E2",
+       "value": 35
+      },
+      {
+       "comment": "DU4",
+       "description": "DU4",
+       "value": -31
+      },
+      {
+       "comment": "DE2",
+       "description": "DE2",
+       "value": -32
+      },
+      {
+       "comment": "DE2",
+       "description": "DE2",
+       "value": -33
+      },
+      {
+       "comment": "DE2",
+       "description": "DE2",
+       "value": -34
+      },
+      {
+       "comment": "DE2",
+       "description": "DE2",
+       "value": -35
+      },
+      {
+       "comment": "F5",
+       "description": "F5",
+       "value": 47
+      },
+      {
+       "comment": "F5 CLEAR",
+       "description": "F5 CLEAR",
+       "value": -47
+      }
+     ],
+     "name": "flag-bit.fault-value",
+     "piid": 1,
+     "range": null,
+     "siid": 13,
+     "unit": ""
+    },
+    {
+     "desc": "mosquito-life",
+     "format": "uint8",
+     "list": null,
+     "name": "mosquito-repellent.mosquito-life",
+     "piid": 2,
+     "range": [
+      0,
+      101,
+      1
+     ],
+     "siid": 19,
+     "unit": "percentage"
+    },
+    {
+     "desc": "",
+     "format": "string",
+     "list": null,
+     "name": "favorite-type-data.user-defined-mode",
+     "piid": 1,
+     "range": null,
+     "siid": 23,
+     "unit": ""
+    }
+   ]
+  }
+ },
+ "xiaomi.router.ra80": {
+  "model": "xiaomi.router.ra80",
+  "stats": {
+   "control": [
+    {
+     "desc": "Network Connection Type",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "自动",
+       "description": "Auto",
+       "value": 1
+      }
+     ],
+     "name": "router.network-connection-type",
+     "piid": 4,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "PPPOE Username",
+     "format": "string",
+     "list": null,
+     "name": "router.ppp-username",
+     "piid": 8,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "PPPOE Encrypted Password",
+     "format": "string",
+     "list": null,
+     "name": "router.ppp-encrypted-password",
+     "piid": 9,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Static IP Address",
+     "format": "string",
+     "list": null,
+     "name": "router.static-ip-address",
+     "piid": 10,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Subnet Mask",
+     "format": "string",
+     "list": null,
+     "name": "router.subnet-mask",
+     "piid": 11,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Gateway IP Address",
+     "format": "string",
+     "list": null,
+     "name": "router.gateway-ip-address",
+     "piid": 12,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "DNS IP Address",
+     "format": "string",
+     "list": null,
+     "name": "router.dns-ip-address",
+     "piid": 13,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "DNS Auto Mode",
+     "format": "bool",
+     "list": null,
+     "name": "router.dns-auto-mode",
+     "piid": 14,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Access Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "",
+       "value": 0
+      }
+     ],
+     "name": "router.access-mode",
+     "piid": 15,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Band Combine",
+     "format": "bool",
+     "list": null,
+     "name": "router.wifi-band-combine",
+     "piid": 17,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Service Set Identifier",
+     "format": "string",
+     "list": null,
+     "name": "wifi.wifi-ssid",
+     "piid": 1,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Encrypted Password",
+     "format": "string",
+     "list": null,
+     "name": "wifi.wifi-encrypted-password",
+     "piid": 2,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "wifi.on",
+     "piid": 3,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi SSID Hidden",
+     "format": "bool",
+     "list": null,
+     "name": "wifi.wifi-ssid-hidden",
+     "piid": 4,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Encrypted Strength",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "",
+       "value": 0
+      }
+     ],
+     "name": "wifi.encrypted-strength",
+     "piid": 5,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Signal Strength",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "",
+       "value": 0
+      }
+     ],
+     "name": "wifi.signal-strength",
+     "piid": 6,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Channel",
+     "format": "uint8",
+     "list": null,
+     "name": "wifi.wifi-channel",
+     "piid": 7,
+     "range": [
+      1,
+      14,
+      1
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Bandwidth",
+     "format": "uint8",
+     "list": null,
+     "name": "wifi.wifi-bandwidth",
+     "piid": 8,
+     "range": [
+      20,
+      40,
+      10
+     ],
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "guest-wifi.on",
+     "piid": 1,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Service Set Identifier",
+     "format": "string",
+     "list": null,
+     "name": "guest-wifi.wifi-ssid",
+     "piid": 2,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Encrypted Password",
+     "format": "string",
+     "list": null,
+     "name": "guest-wifi.wifi-encrypted-password",
+     "piid": 3,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Encrypted Strength",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "",
+       "value": 0
+      }
+     ],
+     "name": "guest-wifi.encrypted-strength",
+     "piid": 4,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Signal Strength",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "",
+       "value": 0
+      }
+     ],
+     "name": "guest-wifi.signal-strength",
+     "piid": 5,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Channel",
+     "format": "uint8",
+     "list": null,
+     "name": "guest-wifi.wifi-channel",
+     "piid": 6,
+     "range": [
+      1,
+      14,
+      1
+     ],
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "WiFi Bandwidth",
+     "format": "uint8",
+     "list": null,
+     "name": "guest-wifi.wifi-bandwidth",
+     "piid": 7,
+     "range": [
+      20,
+      40,
+      10
+     ],
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Speed Control",
+     "format": "bool",
+     "list": null,
+     "name": "guest-wifi.speed-control",
+     "piid": 8,
+     "range": null,
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Max Upload Speed",
+     "format": "uint32",
+     "list": null,
+     "name": "guest-wifi.max-upload-speed",
+     "piid": 9,
+     "range": [
+      0,
+      1000,
+      1
+     ],
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Max Download Speed",
+     "format": "uint32",
+     "list": null,
+     "name": "guest-wifi.max-download-speed",
+     "piid": 10,
+     "range": [
+      1,
+      10000,
+      1
+     ],
+     "siid": 4,
+     "unit": ""
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "indicator-light.on",
+     "piid": 1,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "自动",
+       "description": "Auto",
+       "value": 0
+      }
+     ],
+     "name": "indicator-light.mode",
+     "piid": 2,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Brightness",
+     "format": "uint8",
+     "list": null,
+     "name": "indicator-light.brightness",
+     "piid": 3,
+     "range": [
+      1,
+      100,
+      1
+     ],
+     "siid": 5,
+     "unit": "percentage"
+    },
+    {
+     "desc": "Color",
+     "format": "uint32",
+     "list": null,
+     "name": "indicator-light.color",
+     "piid": 4,
+     "range": [
+      0,
+      16777215,
+      1
+     ],
+     "siid": 5,
+     "unit": "rgb"
+    },
+    {
+     "desc": "Color Temperature",
+     "format": "uint32",
+     "list": null,
+     "name": "indicator-light.color-temperature",
+     "piid": 5,
+     "range": [
+      1000,
+      10000,
+      1
+     ],
+     "siid": 5,
+     "unit": "kelvin"
+    },
+    {
+     "desc": "Flow",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Auto",
+       "value": 0
+      }
+     ],
+     "name": "indicator-light.flow",
+     "piid": 6,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    },
+    {
+     "desc": "Saturability",
+     "format": "uint8",
+     "list": null,
+     "name": "indicator-light.saturability",
+     "piid": 7,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 5,
+     "unit": "percentage"
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device ID",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-no",
+     "piid": 5,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Download Speed",
+     "format": "float",
+     "list": null,
+     "name": "router.download-speed",
+     "piid": 1,
+     "range": [
+      0,
+      100,
+      0.1
+     ],
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Upload Speed",
+     "format": "float",
+     "list": null,
+     "name": "router.upload-speed",
+     "piid": 2,
+     "range": [
+      0,
+      100,
+      0.1
+     ],
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Connected Device Number",
+     "format": "uint16",
+     "list": null,
+     "name": "router.connected-device-number",
+     "piid": 3,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "IP Address",
+     "format": "string",
+     "list": null,
+     "name": "router.ip-address",
+     "piid": 5,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Status",
+     "format": "uint8",
+     "list": [
+      {
+       "description": "Idle",
+       "value": 1
+      },
+      {
+       "description": "Busy",
+       "value": 2
+      }
+     ],
+     "name": "router.status",
+     "piid": 6,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Device Fault",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "无故障",
+       "description": "No Faults",
+       "value": 0
+      }
+     ],
+     "name": "router.fault",
+     "piid": 7,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Received Signal Strength Indicator",
+     "format": "int8",
+     "list": null,
+     "name": "router.rssi",
+     "piid": 16,
+     "range": [
+      -100,
+      0,
+      1
+     ],
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Online Time",
+     "format": "uint32",
+     "list": null,
+     "name": "router.online-time",
+     "piid": 18,
+     "range": [
+      0,
+      10000,
+      1
+     ],
+     "siid": 2,
+     "unit": "minutes"
+    }
+   ]
+  }
+ },
+ "xiaomi.sensor_ht.mini": {
+  "model": "xiaomi.sensor_ht.mini",
+  "stats": {
+   "control": [],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device ID",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-no",
+     "piid": 5,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "Relative Humidity",
+     "format": "uint8",
+     "list": null,
+     "name": "temperature-humidity-sensor.relative-humidity",
+     "piid": 1002,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 2,
+     "unit": "percentage"
+    },
+    {
+     "desc": "Temperature",
+     "format": "float",
+     "list": null,
+     "name": "temperature-humidity-sensor.temperature",
+     "piid": 1001,
+     "range": [
+      -30,
+      100,
+      0.1
+     ],
+     "siid": 2,
+     "unit": "celsius"
+    },
+    {
+     "desc": "Battery Level",
+     "format": "uint8",
+     "list": null,
+     "name": "battery.battery-level",
+     "piid": 1003,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 3,
+     "unit": "percentage"
+    }
+   ]
+  }
+ },
+ "xiaomi.switch.w1": {
+  "model": "xiaomi.switch.w1",
+  "stats": {
+   "control": [
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "switch.on",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "有线和无线开关",
+       "description": "Wired And Wireless",
+       "value": 0
+      },
+      {
+       "comment": "无线开关",
+       "description": "Wireless",
+       "value": 1
+      }
+     ],
+     "name": "switch.mode",
+     "piid": 2,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Anti Flicker",
+     "format": "bool",
+     "list": null,
+     "name": "switch.anti-flicker",
+     "piid": 4,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Mode",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "极速单击模式",
+       "description": "Quick Single Click",
+       "value": 0
+      },
+      {
+       "comment": "多功能模式",
+       "description": "Multiple Click",
+       "value": 1
+      }
+     ],
+     "name": "switch-sensor.mode",
+     "piid": 1,
+     "range": null,
+     "siid": 3,
+     "unit": ""
+    },
+    {
+     "desc": "Switch Status",
+     "format": "bool",
+     "list": null,
+     "name": "indicator-light.on",
+     "piid": 1,
+     "range": null,
+     "siid": 5,
+     "unit": ""
+    }
+   ],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [
+    {
+     "desc": "vol",
+     "format": "uint16",
+     "list": null,
+     "name": "switch-set.vol",
+     "piid": 3,
+     "range": [
+      0,
+      32000,
+      1
+     ],
+     "siid": 6,
+     "unit": "mV"
+    }
+   ],
+   "observe": [
+    {
+     "desc": "Device Fault",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "无故障",
+       "description": "No Faults",
+       "value": 0
+      },
+      {
+       "comment": "开关温度过高，已关闭。",
+       "description": "Over Temperature",
+       "value": 1
+      },
+      {
+       "comment": "过载",
+       "description": "Overload",
+       "value": 2
+      },
+      {
+       "comment": "负载电流低，仅无线功能可用，部分功能异常，需提升负载功率。",
+       "description": "UnderVol",
+       "value": 3
+      }
+     ],
+     "name": "switch.fault",
+     "piid": 3,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Wiring Method",
+     "format": "uint8",
+     "list": [
+      {
+       "comment": "No Neutral",
+       "description": "No Neutral",
+       "value": 0
+      },
+      {
+       "comment": "Neutral Wire",
+       "description": "Neutral Wire",
+       "value": 1
+      }
+     ],
+     "name": "switch.wiring-method",
+     "piid": 6,
+     "range": null,
+     "siid": 2,
+     "unit": ""
+    },
+    {
+     "desc": "Temperature",
+     "format": "int32",
+     "list": null,
+     "name": "switch.temperature",
+     "piid": 7,
+     "range": [
+      -30,
+      100,
+      1
+     ],
+     "siid": 2,
+     "unit": "celsius"
+    }
+   ]
+  }
+ },
+ "yeelink.light.nl1": {
+  "model": "yeelink.light.nl1",
+  "stats": {
+   "control": [],
+   "meta": [
+    {
+     "desc": "Device Manufacturer",
+     "format": "string",
+     "list": null,
+     "name": "device-information.manufacturer",
+     "piid": 1,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Model",
+     "format": "string",
+     "list": null,
+     "name": "device-information.model",
+     "piid": 2,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Device Serial Number",
+     "format": "string",
+     "list": null,
+     "name": "device-information.serial-number",
+     "piid": 3,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    },
+    {
+     "desc": "Current Firmware Version",
+     "format": "string",
+     "list": null,
+     "name": "device-information.firmware-revision",
+     "piid": 4,
+     "range": null,
+     "siid": 1,
+     "unit": ""
+    }
+   ],
+   "notify_only": [],
+   "observe": [
+    {
+     "desc": "No Motion Duration",
+     "format": "uint16",
+     "list": [
+      {
+       "description": "2 Minutes",
+       "value": 2
+      },
+      {
+       "description": "5 Minutes",
+       "value": 5
+      },
+      {
+       "description": "10 Minutes",
+       "value": 10
+      },
+      {
+       "description": "20 Minutes",
+       "value": 20
+      },
+      {
+       "description": "30 Minutes",
+       "value": 30
+      }
+     ],
+     "name": "motion-sensor.no-motion-duration",
+     "piid": 1,
+     "range": null,
+     "siid": 2,
+     "unit": "minutes"
+    },
+    {
+     "desc": "Battery Level",
+     "format": "uint8",
+     "list": null,
+     "name": "battery.battery-level",
+     "piid": 1,
+     "range": [
+      0,
+      100,
+      1
+     ],
+     "siid": 3,
+     "unit": "percentage"
+    },
+    {
+     "desc": "Illumination",
+     "format": "float",
+     "list": null,
+     "name": "illumination-sensor.illumination",
+     "piid": 1,
+     "range": [
+      0,
+      10000,
+      1
+     ],
+     "siid": 4,
+     "unit": "lux"
+    }
+   ]
+  }
+ }
+}

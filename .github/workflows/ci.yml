@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  rust-tests:
+    name: cargo test（协议对拍 + 编排 mock）
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        crate: [mijia-core, home-control-mcp]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ${{ matrix.crate }}
+      - name: test
+        run: cargo test --manifest-path ${{ matrix.crate }}/Cargo.toml
+
+  secret-scan:
+    name: check_secrets（真实账号痕迹闸门）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: scan
+        run: python tools/check_secrets.py --all

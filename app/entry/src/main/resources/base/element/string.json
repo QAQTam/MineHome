@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "家居设备控制"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "MineHome"
+    },
+    {
+      "name": "ble_reason",
+      "value": "用于接收自家温湿度计等蓝牙设备的本地广播，实现更实时的状态显示"
+    }
+  ]
+}

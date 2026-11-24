@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "model": "yeelink.light.nl1",
+  "category": "light",
+  "scrub": "synthetic",
+  "values": [],
+  "expect": {
+    "items": [
+      "observe_number:4:1",
+      "observe_number:3:1",
+      "observe_number:2:1"
+    ],
+    "quick_switch": false,
+    "quick_switch_reason": "blocked_no_toggle",
+    "control_services_excluded": true
+  },
+  "release": {
+    "quick_switch": false,
+    "confirmed_by": "",
+    "policy": "只读先行：打开需人工确认并在 confirmed_by 记录确认人/日期"
+  }
+}
