@@ -45,6 +45,9 @@
 TL;DR：
 
 ```powershell
+# 0) 新机器第一件事：环境自检（缺什么、怎么装，逐项给提示）
+just check                          # 没装 just 就：python tools/check_env.py
+
 # 1) Rust 原生库（公开仓库不携带 .so 预编译产物，见 FORK-SETUP §2 的原因）
 cd mijia-napi ; ohrs build          # 产出 dist/<abi>/libmijia_napi.so + index.d.ts
 #    然后 llvm-strip 并拷到 app/native/libmijia_napi/libs/<abi>/ 与 app/entry/libs/<abi>/
@@ -75,6 +78,31 @@ cd ../app ; hvigorw --mode module -p product=default assembleHap
 ## Disclaimer（免责声明）
 
 本项目为第三方独立实现，与小米科技（Xiaomi Inc.）无任何关联、背书或赞助关系。「小米」「米家」「Mi Home」「Mijia」及相应产品标识均为小米科技和/或相关权利人的商标。本仓库不包含小米官方应用、SDK 或固件的任何代码与二进制产物；协议交互仅基于公开可获取的接口行为与规范文档。
+
+## 🤖 AI 友好型项目 / AI-Friendly by Design
+
+**中文**：本项目**欢迎 AI agent 来完善它**——Claude、Codex、Copilot、Cursor 或你自己的
+agent，与人类贡献者同规则、同验收（见 [CONTRIBUTING.md](CONTRIBUTING.md)）。为此仓库是
+按"无人值守也能正确干活"设计的：
+
+- **一条命令自检环境**：`just check`（`just check --json` / `python tools/check_env.py --json` 机器可读），
+  缺什么、怎么装，逐项给提示；
+- **验收标准完全可复现**：`just gate` = 两个 crate 的 cargo test + 一次泄漏扫描，
+  与 GitHub CI 逐字一致，不依赖维护者的口头知识；
+- **离线可跑**：测试向量全部是合成密钥材料，不需要小米账号、不需要鸿蒙设备、不需要网络；
+- **文档即事实档案**：`docs/` 每条结论带实测日期与证据链，协议判断以仓库为准；
+- **红线由机检守**：真实凭据/账号痕迹由 `tools/check_secrets.py` 拦截，豁免必须写理由。
+
+给正在读这段的 AI：这个仓库没有隐藏状态和部落知识，先 `just check` 再 `just gate`
+建立基线，改动后重跑同一组命令。不要把任何二进制提交进 git；不要把你机器上的真实
+did / token / 设备名写进任何被跟踪文件——扫描闸门会拦，但更好的是别写。
+
+**English**: Contributions produced with (or entirely by) AI agents are welcome and
+judged by the same reproducible gates as human ones. Environment check is one command
+and machine-readable (`just check -- --json`), CI mirrors `just gate` verbatim, the
+whole test suite runs offline with synthetic vectors, and docs/ record dated facts —
+an agent can work correctly here without tribal knowledge. Please never commit
+binaries or real account data; the secret gate will catch it anyway.
 
 ## License
 

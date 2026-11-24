@@ -8,6 +8,10 @@
 
 ## 0. 你需要准备什么
 
+> 下表全部东西装没装齐，不用人肉核对：仓库根跑 `python tools/check_env.py`
+> （或 `just check`），`[x]` 项按提示补，`[!]` 项只影响对应构建环节。
+> 给 CI / AI agent 消费的机器可读版：`python tools/check_env.py --json`。
+
 | 必需 | 说明 |
 |---|---|
 | DevEco Studio / Command-Line Tools | 需要 **API 26（HarmonyOS NEXT 5.x）** SDK。下文用 `$CLT` 代指 `command-line-tools` 根目录 |
@@ -114,7 +118,7 @@ python tools/check_secrets.py       # 退出码 0 = 没有把真实账号痕迹�
 | `mijia-core/fixtures/` | 集成测试夹具：云端卡片模板 + miot-spec 样本 + **按 model 索引**的 spec 分类（无 did、无用户设备名） |
 | `mijia-napi/` | 鸿蒙 NAPI 绑定（ohos-rs）。`ohrs build` 的产物目录 `dist/` 不入库 |
 | `app/` | ArkTS 应用。`entry/src/main/ets/pages/Index.ets` 是主页面，`miot/` 是 SDK 薄封装 |
-| `tools/` | `make_card_fixtures.py`（重建夹具）、`check_secrets.py`（泄漏扫描）、`gen_fixtures.py`（生成 vectors.json） |
+| `tools/` | `check_env.py`（新机器环境自检）、`make_card_fixtures.py`（重建夹具）、`check_secrets.py`（泄漏扫描）、`gen_fixtures.py`（生成 vectors.json） |
 | `中间件设计.md` | 分层与 API 契约设计文档（Rust 侧的"应该长什么样"以它为准） |
 
 **不含**在仓库里、但文档多处提到的 `_work/`：逆向工作目录（真机抓包、jadx 反编译、dumpLayout、日志、截图），全是真实账号数据，所以整目录忽略。新克隆的仓库**不需要它也能编译和测试**（夹具已搬进 `mijia-core/fixtures/`）。
